@@ -25,7 +25,7 @@ jsPsych.plugins["poldrack-categorize"] = (function() {
     trial.force_correct_button_press = (typeof trial.force_correct_button_press === 'undefined') ? false : trial.force_correct_button_press;
     trial.prompt = (typeof trial.prompt === 'undefined') ? '' : trial.prompt;
     trial.show_feedback_on_timeout = (typeof trial.show_feedback_on_timeout === 'undefined') ? false : trial.show_feedback_on_timeout;
-    trial.timeout_message = trial.timeout_message || "<p>Please respond faster.</p>";
+    trial.timeout_message = trial.timeout_message || "<p>Пожалуйста, отвечай быстрее.</p>";
     // timing params
     trial.response_ends_trial = (typeof trial.response_ends_trial == 'undefined') ? false : trial.response_ends_trial;
     trial.timing_stim = trial.timing_stim || -1; // default is to show image until response

@@ -1,9 +1,12 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto|Raleway|Roboto+Slab)
+@import url(https://fonts.googleapis.com/css?family=Roboto|Raleway|Roboto+Slab) html
 
-html {
-  font-family: sans-serif;
-  font-size: 18px;
-  line-height: 1.6em;
+{
+  font-family: sans-serif
+;
+  font-size: 18px
+;
+  line-height: 1.6em
+;
 }
 
 body {
@@ -38,8 +41,8 @@ body {
   z-index: 0;
   padding: 30px 30px 30px 30px;
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-  box-sizing: border-box;         /* Opera/IE 8+ */
+  -moz-box-sizing: border-box; /* Firefox, other Gecko */
+  box-sizing: border-box; /* Opera/IE 8+ */
   overflow: auto;
 }
 
@@ -47,18 +50,18 @@ body {
 .centerbox {
   width: 50vw;
   height: 60vh;
-  position:absolute;
-  top:50%;
-  left:50%;
-  margin-right:-50%;
-  transform: translate(-50%,-50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
 }
 
 
 /* Text based classes */
 /* Used for general instructions */
 .block-text {
-  width:100%;
+  width: 100%;
   height 100vw;
   text-align: justify;
   margin: 0 auto;
@@ -69,7 +72,7 @@ body {
 
 /* As above but centered instead of justified. Good for instructions with few lines */
 .center-block-text {
-  width:100%;
+  width: 100%;
   height 100vw;
   text-align: center;
   margin: 0 auto;
@@ -80,7 +83,7 @@ body {
 
 /* used for large text shown in the center of the screen, like FB or stimuli */
 .center-text {
-  text-align:center;
+  text-align: center;
   font-size: 60px;
   position: relative;
   top: 50%;
@@ -94,14 +97,14 @@ body {
   text-align: center;
   font-size: 150px;
   position: relative;
-  top: 50%; 
+  top: 50%;
   transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
 }
 
 
 /* Used in lists */
-.list-text li{
+.list-text li {
   font-size: 20px;
 }
 
@@ -150,7 +153,7 @@ Sample html: <div class = centerbox><div class = img-container><img...></img></d
 .jspsych-poldrack-survey-multi-choice-question {
   margin-top: 2em;
   margin-bottom: 2em;
- }
+}
 
 .jspsych-poldrack-survey-multi-choice-text span.required {
   color: darkred;
@@ -163,6 +166,7 @@ Sample html: <div class = centerbox><div class = img-container><img...></img></d
 .jspsych-poldrack-survey-multi-choice-option {
   line-height: 2;
 }
+
 .jspsych-poldrack-survey-multi-choice-horizontal .jspsych-poldrack-survey-multi-choice-option {
   display: inline-block;
   margin-left: 1em;
@@ -180,13 +184,13 @@ label.jspsych-poldrack-survey-multi-choice-text input[type="radio"] {
 }
 
 .jspsych-poldrack-survey-multi-choice-opts {
-  list-style:none;
-  width:100%;
-  margin:0;
-  padding:0 0 35px;
-  display:block;
+  list-style: none;
+  width: 100%;
+  margin: 0;
+  padding: 0 0 35px;
+  display: block;
   font-size: 13px;
-  line-height:1.1em;
+  line-height: 1.1em;
 }
 
 .jspsych-poldrack-survey-multi-choice-opt-label {
@@ -195,13 +199,13 @@ label.jspsych-poldrack-survey-multi-choice-text input[type="radio"] {
 
 .jspsych-poldrack-survey-multi-choice-opts:before {
   content: '';
-  position:relative;
-  top:11px;
+  position: relative;
+  top: 11px;
   /*left:9.5%;*/
-  display:block;
+  display: block;
   /*background-color:#efefef*/;
-  height:4px;
-  width:100%;
+  height: 4px;
+  width: 100%;
 }
 
 .jspsych-poldrack-survey-multi-choice-opts:last-of-type {
@@ -210,18 +214,18 @@ label.jspsych-poldrack-survey-multi-choice-text input[type="radio"] {
 
 /*descendants of horizontal are inline-block*/
 .jspsych-poldrack-survey-multi-choice-horizontal .jspsych-poldrack-survey-multi-choice-opts li {
-  display:inline-block;
+  display: inline-block;
   /*width:19%;*/
-  text-align:center;
+  text-align: center;
   vertical-align: top;
   padding: 0px;
 }
 
 /*otherwise they are just block*/
 .jspsych-poldrack-survey-multi-choice-opts li {
-  display:block;
+  display: block;
   /*width:100% !important*/;
-  text-align:left;
+  text-align: left;
   vertical-align: top;
   padding: 10px;
 }
@@ -229,70 +233,70 @@ label.jspsych-poldrack-survey-multi-choice-text input[type="radio"] {
 
 /*descendants of horizontal are block so they are above the option*/
 .jspsych-poldrack-survey-multi-choice-horizontal .jspsych-poldrack-survey-multi-choice-opts li input[type=radio] {
-    -webkit-appearance: none;
-    height: 1.5em;
-    position: relative;
-    background-color: #276FF4;
-    width: 1.5em;
-    border-radius: 50%;
-    outline: none;
-    font-size: 14px;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-  display:block;
-  position:relative;
-  top:0;
-  left:50%;
-  margin-left:-6px;
+  -webkit-appearance: none;
+  height: 1.5em;
+  position: relative;
+  background-color: #276FF4;
+  width: 1.5em;
+  border-radius: 50%;
+  outline: none;
+  font-size: 14px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  display: block;
+  position: relative;
+  top: 0;
+  left: 50%;
+  margin-left: -6px;
 }
 
 .jspsych-poldrack-survey-multi-choice-horizontal .jspsych-poldrack-survey-multi-choice-opts li input[type=radio]:checked:before {
-    content: '';
-    height: 0.4em;
-    width: 0.4em;
-    background-color: #FFF;
-    position: absolute;
-    border-radius: 50%;
-    top: 0.3em;
-    left: 0.3em;
+  content: '';
+  height: 0.4em;
+  width: 0.4em;
+  background-color: #FFF;
+  position: absolute;
+  border-radius: 50%;
+  top: 0.3em;
+  left: 0.3em;
 }
 
 
 /*otherwise they are inline-block so they are next to the option*/
 .jspsych-poldrack-survey-multi-choice-opts li input[type=radio] {
-    -webkit-appearance: none;
-    height: 1.5em;
-    position: relative;
-    background-color: #276FF4;
-    width: 1.5em;
-    border-radius: 50%;
-    outline: none;
-    font-size: 14px;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-  display:inline-block;
+  -webkit-appearance: none;
+  height: 1.5em;
+  position: relative;
+  background-color: #276FF4;
+  width: 1.5em;
+  border-radius: 50%;
+  outline: none;
+  font-size: 14px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  display: inline-block;
   /*position:relative;
   top:0;
   left:0;*/
-  margin-right:6px;
+  margin-right: 6px;
 }
 
 .jspsych-poldrack-survey-multi-choice-opts li input[type=radio]:checked:before {
-    content: '';
-    height: 0.4em;
-    width: 0.4em;
-    background-color: #FFF;
-    position: absolute;
-    border-radius: 50%;
-    top: 0.3em;
-    left: 0.3em;
+  content: '';
+  height: 0.4em;
+  width: 0.4em;
+  background-color: #FFF;
+  position: absolute;
+  border-radius: 50%;
+  top: 0.3em;
+  left: 0.3em;
 }
 
 /* Buttons */
 .jspsych-btn, #jspsych-instructions-next, #jspsych-instructions-back {
-  font-size:22px;
+  font-size: 22px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   padding: 12px 20px 12px 20px;
   color: white;
-  background-color:cornflowerblue;
+  background-color: cornflowerblue;
   cursor: pointer;
   line-height: 1.4;
   text-align: center;
@@ -304,7 +308,8 @@ label.jspsych-poldrack-survey-multi-choice-text input[type="radio"] {
 }
 
 #jspsych-instructions-next, #jspsych-instructions-back {
- width: 250px;
+  width: auto;
+  max-width: 330px;
 }
 
 #jspsych-instructions-next, #jspsych-instructions-back {
@@ -312,7 +317,7 @@ label.jspsych-poldrack-survey-multi-choice-text input[type="radio"] {
 }
 
 .jspsych-btn:hover, #jspsych-instructions-next:hover, #jspsych-instructions-back:hover {
-  border-color:#999;
+  border-color: #999;
   background-color: darkblue;
 }
 
@@ -327,9 +332,9 @@ label.jspsych-poldrack-survey-multi-choice-text input[type="radio"] {
  */
 
 .jspsych-survey-text-question > textarea, #jspsych-survey-text-next {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*
@@ -338,18 +343,18 @@ label.jspsych-poldrack-survey-multi-choice-text input[type="radio"] {
  *
  */
 
- #jspsych-attention-check-stimulus {
+#jspsych-attention-check-stimulus {
   width: 50vw;
   height: 60vh;
-  position:absolute;
-  top:50%;
-  left:50%;
-  margin-right:-50%;
-  transform: translate(-50%,-50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
 }
 
 .jspsych-attention-check-stimulus > p {
-  width:100%;
+  width: 100%;
   height 100vw;
   text-align: justify;
   margin: 0 auto;

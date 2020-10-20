@@ -123,14 +123,14 @@ var post_task_block = {
    data: {
        trial_id: "post task questions"
    },
-   questions: ['<p class = center-block-text style = "font-size: 20px">Please summarize what you were asked to do in this task.</p>',
-              '<p class = center-block-text style = "font-size: 20px">Do you have any comments about this task?</p>'],
+   questions: ['<p class = center-block-text style = "font-size: 20px">Кратко опишите, что вас просили сделать в этой задаче.</p>',
+              '<p class = center-block-text style = "font-size: 20px">Есть ли у вас комментарии по поводу этой задачи?</p>'],
    rows: [15, 15],
    columns: [60,60]
 };
 /* define static blocks */
 var feedback_instruct_text =
-	'Welcome to the experiment. Press <strong>enter</strong> to begin.'
+	'Добро пожаловать. Нажмите <strong>Enter</strong>, чтобы начать.'
 var feedback_instruct_block = {
 	type: 'poldrack-text',
 	cont_key: [13],
@@ -145,7 +145,7 @@ var feedback_instruct_block = {
 var instructions_block = {
 	type: 'poldrack-instructions',
 	pages: [
-		"<div class = centerbox><p class = block-text>In this experiment you will see five fish in a line. Some are facing left and some right. You need to feed the fish in the middle of the row and to do this you need to mark which way the fish is looking.  <br /> For instance, you might see <img class='in-line-img' src='images/rrrrr.png' height='20' width='100'/> or <img class='in-line-img' src='images/llrll.png' height='20' width='100'/>. Your task is to respond by pressing the key (or button) corresponding to the <strong>middle</strong> fish. So if you see <img class='in-line-img' src='images/rrlrr.png' height='20' width='100'/> (middle fish looking left) you would press the 'left arrow' key or Yellow button. If the fish was looking right you would press the 'right arrow' key or Red buton. </p><p class = block-text>After each respond you will get feedback about whether you were correct or not. We will start with a short practice set.</p></div>"
+		"<div class = centerbox><p class = block-text>В этом эксперименте ты увидишь пять рыб в линию. Некоторые смотрят влево, а некоторые вправо. Тебе нужно покормить рыбу в середине ряда и для этого нужно отметить, в какую сторону смотрит рыбка.</p><p class = block-text>Поэтому, если ты видишь, что <strong>средняя</strong> рыба смотрит влево <img class='in-line-img' src='images/rrlrr.png' height='20' width='100'/>, нужно нажать клавишу «стрелка влево». Если <strong>средняя</strong> рыба смотрит вправо <img class='in-line-img' src='images/llrll.png' height='20' width='100'/>, нужно нажать кнопку «стрелка вправо».</p><p class = block-text>После каждого ответа ты будешь получать обратную связь о том, правильно ты определил направление или нет. Начнем с небольшой практики.</p></div>"
 	],
 	allow_keys: false,
 	data: {
@@ -210,9 +210,9 @@ var end_block = {
 	},
 	text: function() {
     var data = compute_experiment_summary()
-    return "<p>You responded correctly on "+data.accuracy+"% of the trials. " +
-      "Your average response time was <strong>" + data.rt + "ms</strong>. Press enter to complete the "+
-      "experiment. Thank you!</p>"
+    return "<p>Вы ответили верно на "+data.accuracy+"%. " +
+      "Ваше среднее время ответа, составило <strong>" + data.rt + "мс</strong>. Нажмите Enter для завершения "+
+      "теста. Спасибо!</p>"
   },
 	cont_key: [13],
 	timing_post_trial: 0
@@ -224,7 +224,7 @@ var start_test_block = {
 		trial_id: "test_intro"
 	},
 	timing_response: 180000,
-	text: '<div class = centerbox><p class = center-block-text>Done with practice. Starting test.</p><p class = center-block-text>Press <strong>enter</strong> to begin.</p></div>',
+	text: '<div class = centerbox><p class = center-block-text>Закончим с практикой. Приступим к тестированию.</p><p class = center-block-text>Нажмите <strong>Enter</strong>, чтобы начать.</p></div>',
 	cont_key: [13],
 	timing_post_trial: 1000
 };
@@ -253,9 +253,9 @@ for (i = 0; i < practice_len; i++) {
 		type: 'poldrack-categorize',
 		stimulus: practice_trial.image,
 		key_answer: practice_trial.data.correct_response,
-		correct_text: '<div class = centerbox><div style="color:green"; class = center-text>Correct!</div></div>',
-		incorrect_text: '<div class = centerbox><div style="color:red"; class = center-text>Incorrect</div></div>',
-		timeout_message: '<div class = centerbox><div class = flanker-text>Respond faster</div></div>',
+		correct_text: '<div class = centerbox><div style="color:green"; class = center-text>Верно!</div></div>',
+		incorrect_text: '<div class = centerbox><div style="color:red"; class = center-text>Неверно</div></div>',
+		timeout_message: '<div class = centerbox><div class = flanker-text>Отвечай быстрее</div></div>',
 		choices: all_keys,
 		data: practice_trial.data,
 		timing_feedback_duration: 1000,
@@ -281,9 +281,9 @@ for (i = 0; i < exp_len; i++) {
 		type: 'poldrack-categorize',
 		stimulus: test_trial.image,
 		key_answer: test_trial.data.correct_response,
-		correct_text: '<div class = centerbox><div style="color:green"; class = center-text>Correct!</div></div>',
-		incorrect_text: '<div class = centerbox><div style="color:red"; class = center-text>Incorrect</div></div>',
-		timeout_message: '<div class = centerbox><div class = flanker-text>Respond faster!</div></div>',
+		correct_text: '<div class = centerbox><div style="color:green"; class = center-text>Верно!</div></div>',
+		incorrect_text: '<div class = centerbox><div style="color:red"; class = center-text>Неверно</div></div>',
+		timeout_message: '<div class = centerbox><div class = flanker-text>Отвечай быстрее!</div></div>',
 		choices: all_keys,
 		data: test_trial.data,
 		timing_feedback_duration: 1000,

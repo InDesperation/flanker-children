@@ -41,7 +41,7 @@ jsPsych.plugins['poldrack-instructions'] = (function() {
 
         var nav_html = "<div class='jspsych-instructions-nav'>";
         if (trial.pages.length == 1) {
-          nav_html += "<button id='jspsych-instructions-next'>End Instructions</button>"
+          nav_html += "<button id='jspsych-instructions-next'>Завершить инструкцию</button>"
         } else {
           if (current_page == 0) {
             nav_html += "<button id='jspsych-instructions-next'>Next</button>"
@@ -49,7 +49,7 @@ jsPsych.plugins['poldrack-instructions'] = (function() {
             if (trial.allow_backward) {
               nav_html += "<button id='jspsych-instructions-back'>Previous</button>";
             }
-            nav_html += "<button id='jspsych-instructions-next'>End Instructions</button>"
+            nav_html += "<button id='jspsych-instructions-next'>Завершить инструкцию</button>"
           } else {
             if (trial.allow_backward) {
               nav_html += "<button id='jspsych-instructions-back'>Previous</button>";
