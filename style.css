@@ -1,0 +1,31 @@
+.flanker-text {
+	text-align: center;
+	font-size: 50px;
+	position: relative;
+    top: 50%; 
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+}
+
+.in-line-img {
+	display:inline-block;
+	vertical-align:bottom;
+}
+
+.responded {
+	visibility: hidden;
+}
+
+div.jspsych-poldrack-categorize-stimulus {
+	position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  text-align: center;
+}
+
+div.jspsych-poldrack-categorize-stimulus img {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+}

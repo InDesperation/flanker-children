@@ -1,0 +1,19 @@
+{
+    "cognitive_atlas_task_id": "tsk_4a57abb949a4f",
+    "instructions":"Respond to the stimuli on the screen.",
+    "description":"Expfactory experiment",
+    "url":"https://www.github.com/ACECentre/flanker-children",
+    "contributors": [
+        "Ian Eisenberg",
+        "Zeynep Enkavi",
+        "Patrick Bissett",
+        "Vanessa Sochat",
+        "Russell Poldrack",
+        "Will Wade"
+    ],
+    "exp_id": "flanker-children",
+    "name": "Flanker Modified for Children Task",
+    "reference": ["www.ncbi.nlm.nih.gov/pmc/articles/PMC529252/"],
+    "template": "jspsych",
+    "time": 7
+}
