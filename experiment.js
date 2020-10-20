@@ -91,8 +91,8 @@ $.each(test_stimuli, function() {
   this.image = new Image();
   this.image.src = this.image_url
 })
-var practice_len = 5 //5
-var exp_len = 25 //5
+var practice_len = 1 //5
+var exp_len = 1 //25
 var practice_trials = jsPsych.randomization.repeat(test_stimuli, Math.ceil(practice_len / test_stimuli.length)).slice(0, practice_len);
 var test_trials = jsPsych.randomization.repeat(test_stimuli, Math.ceil(exp_len / test_stimuli.length)).slice(0, exp_len);
 
@@ -243,6 +243,18 @@ var fixation_block = {
 	on_finish: changeData,
 };
 
+var outro_test_block = {
+	type: 'poldrack-text',
+	is_html: true,
+	data: {
+		trial_id: "test_outro"
+	},
+	timing_stim: 2000,
+	timing_response: 2000,
+	timing_post_trial: 0,
+	text: '<div class = centerbox><div class="img-container"><img src="images/outro.jpg" alt="Молодец"></div></div>',
+};
+
 //Set up experiment
 flanker_experiment = []
 flanker_experiment.push(instruction_node);
@@ -299,5 +311,6 @@ for (i = 0; i < exp_len; i++) {
 	flanker_experiment.push(test_block)
 }
 flanker_experiment.push(attention_node)
+flanker_experiment.push(outro_test_block)
 flanker_experiment.push(post_task_block)
 flanker_experiment.push(end_block)
